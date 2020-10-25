@@ -1,0 +1,230 @@
+:root {
+    --primary: #181f47;
+    --background: #fbfdff;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    z-index: 2;
+    background: #0093E9;
+}
+
+.first {
+    top: 0;
+}
+
+.second {
+    top: 33.3%
+}
+
+.third {
+    top: 66.6%;
+}
+
+.btn-background {
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+
+.title{
+    background: -webkit-linear-gradient(#0093E9, #80D0C7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body {
+    background: var(--primary);
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    background: var(--primary);
+}
+
+.todoapp-container {
+    max-height: calc(100vh - 210px);
+    overflow-y: auto;
+}
+
+.todoapp-container::-webkit-scrollbar {
+    background-color: transparent;
+    width: 8px;
+}
+
+.todoapp-container::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 16px;
+    border: 4px solid rgba(194, 194, 194, 0.25);
+}
+
+#tasks-list li {
+    width: 40%;
+    box-shadow: 0px 5px 20px rgba(194, 194, 194, 0.25);
+    border-radius: 10px;
+    padding: 1em 1em;
+    margin: 1em auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(66, 153, 225, 0.7);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#tasks-list li span {
+    width: 24px;
+    height: 20px;
+    background: var(--primary);
+    border-radius: 2px;
+    margin-right: 1em;
+    cursor: pointer;
+}
+
+#tasks-list li span.completed {
+    background: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    color: wheat;
+}
+
+#tasks-list li .task {
+    width: 100%;
+    outline: 0;
+    border: 0;
+}
+
+#tasks-list li del {
+    width: 100%;
+}
+
+#tasks-list li .remove, #tasks-list li .edit {
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+#tasks-list li:hover .remove, #tasks-list li:hover .edit {
+    opacity: 1;
+}
+
+#tasks-list li .remove {
+    color: #C02519;
+}
+
+#tasks-list li .edit {
+    color: #7CBC2D;
+}
+
+.bottom-fixed {
+    position: absolute;
+    width: 100%;
+    bottom: 2%;
+}
+
+.alert {
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    text-align: center;
+    padding: 0.75rem 1.25rem;
+    border-radius: 10px;
+    line-height: 1.6em;
+}
+
+.alert-warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+.github {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    right: 5%;
+    bottom: 5%;
+    border-radius: 50%;
+    background: black;
+    box-shadow: 0px 2px 20px rgba(black, 0.5);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.github:hover {
+    opacity: 0.9;
+}
+
+.bxl-github {
+    color: white;
+    font-size: 2.5em;
+}
+
+.bx-check {
+    color: var(--pure);
+    font-size: 1em;
+}
+
+.bx-trash-alt, .bxs-edit {
+    font-size: 1.5em;
+    color: var(--gray);
+    cursor: pointer;
+    margin: 0 0.2em;
+}
+
+/* Responsive (768px) */
+
+@media screen and (max-width: 768px) {
+    #tasks-list li {
+        width: 90%;
+    }
+    #tasks-list li span {
+        width: 34px;
+        height: 20px;
+    }
+    #tasks-list li .remove, #tasks-list li .edit {
+        opacity: 1;
+    }
+    #tasks-list li .remove {
+        color: rgba(192, 37, 25, 0.8);
+    }
+    #tasks-list li .edit {
+        color: rgba(124, 188, 45, 0.8);
+    }
+    .todoapp-container::-webkit-scrollbar {
+        background-color: transparent;
+        width: 5px;
+    }
+    .todoapp-container {
+        max-height: calc(100vh - 180px);
+    }
+    .alert {
+        width: 90%;
+    }
+    .github {
+        width: 46px;
+        height: 46px;
+        right: 3%;
+        bottom: 3%;
+    }
+    .bxl-github {
+        font-size: 1.8em;
+    }
+    .bottom-fixed {
+        position: absolute;
+        right: 0%;
+        bottom: 2%;
+    }
+    .git-logo-fix {
+        padding-right: 53px;
+    }
+    .toastify {
+        padding: 7px 7px 7px 7px;
+        color: #fff;
+        display: inline-block;
+        box-shadow: 0 3px 6px -1px rgba(0, 0, 0, .12), 0 10px 36px -4px rgba(77, 96, 232, .3);
+    }
+}

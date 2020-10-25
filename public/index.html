@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Todo List App</title>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="JavaScript TodoList,Js TodoList,JavaScript TodoApp,Todolist JavaScript,TodoApp JavaScript">
+
+    <!-- Links -->
+    <link href="https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="icon" href="../src/favicon.ico" type="x-icon" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="custom.css"/>
+    <link rel="stylesheet" href="tailwind.css">
+</head>
+
+<body>
+    <div class="overlay first"></div>
+    <div class="overlay second"></div>
+    <div class="overlay third"></div>
+
+    <!-- Main Header -->
+    <header class="header text-center text-white py-2  my-2 mb-6">
+        <h1 class="font-extrabold uppercase sm:text-5xl  text-4xl tracking-wider title">Todo App</h1>
+        <p class="sm:text-xl text-base">JavaScript Todo App</p>
+    </header>
+    <!-- End Main Header -->
+
+    <div class="todoapp-container">
+        <!-- Add Task -->
+        <div id="add-task" class="flex justify-center search">
+            <input class="bg-blue-900 text-white p-2 pl-4 pr-4 sm:w-6/12 rounded focus:outline-none" id="add-task-input"
+                type="text" placeholder="Add todo task..." />
+        </div>
+
+        <!-- Buttons -->
+        <div class="text-white flex justify-center my-4">
+            <button onclick="clearCompleteTasks()" class="btn-background text-white sm:font-bold
+                 sm:text-base text-sm  rounded focus:outline-none sm:mr-4 mr-2 px-4 py-2 gsap-btn">
+                Clear complete tasks</button>
+            <button onclick="clearAllTasks()" class="btn-background text-white sm:font-bold
+                sm:text-base text-sm rounded focus:outline-none px-4 py-2 gsap-btn2">
+                Clear all tasks</button>
+        </div>
+
+        <!-- Tasks List -->
+        <ul id="tasks-list" class="gsap-task"></ul>
+
+    </div>
+
+    <section
+        class="bottom-fixed git-logo-fix bg-gray-900 text-center text-gray-800 sm:py-6 sm:text-lg text-sm py-2 gsap-project-author">
+        <p class="text-gray-400">This app was developed by
+            <a href="https://twitter.com/ferkefss" target="_blank"
+                class="text-blue-700 underline font-medium hover:no-underline hover:text-blue-400">
+                Ferhat Kefsiz
+            </a>
+            using Toastify, TailwindCSS, GreenSock and JavaScript.</p>
+    </section>
+
+    <!-- GitHub Button -->
+    <a href="https://github.com/ferhatkefsiz/js-todo-list" target="_blank"
+        class="github gsap-git flex items-center justify-center">
+        <i class="bx bxl-github"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="gsap.js"></script>
+</body>
+
+</html>

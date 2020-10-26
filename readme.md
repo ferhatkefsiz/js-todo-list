@@ -1,7 +1,5 @@
 # Preview
-![Todo List Preview]()
-
-# Javascript Todo
+![](https://js-todoo-app.netlify.app/assets/images/screen.png)
 
 <p align="center">
   <a href="https://greensock.com/">

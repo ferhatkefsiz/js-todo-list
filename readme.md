@@ -18,7 +18,7 @@
 </p>
 
 ## ⚡️ Live
-  [Check it live](https://js-todo-list.netlify.app/)
+  [Check it live](https://js-todoo-app.netlify.app/)
 
 # Features
  - [x] Show tasks list
@@ -49,15 +49,15 @@
 
 2.  **Install Dependencies**
 
-```bash
-    $ npm install
-```
+    ```bash
+        $ npm install
+    ```
 
 3.  **Running**
 
-```sh
-     You can simply use a live server extention or your browser.
-```
+    ```sh
+        You can simply use a live server extention or your browser.
+    ```
 
 ## 💫 Deploy
  [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com)
